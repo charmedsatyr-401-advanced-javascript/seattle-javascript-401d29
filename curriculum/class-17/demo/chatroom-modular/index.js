@@ -1,0 +1,5 @@
+'use strict';
+
+const app = require('./src/app.js');
+
+app.startServer();
