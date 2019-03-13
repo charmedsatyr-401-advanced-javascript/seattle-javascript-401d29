@@ -12,3 +12,11 @@
 
 ## Canvas Submission
  * Submit a link to your sandbox
+
+## Grading Rubric
+
+| Criteria            | Deductions / Notes                                  | Max Points |
+| ------------------- | --------------------------------------------------- | ---------- |
+| Feature Completion  | Score based on % of features demonstrably completed | 2.5        |
+| Code Implementation | Inefficiency // Poor Code Quality                   |
+|                     |                                                     | 5          |

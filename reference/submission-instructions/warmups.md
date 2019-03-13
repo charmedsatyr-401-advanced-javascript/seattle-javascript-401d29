@@ -10,3 +10,11 @@
 
 ### Canvas Submission
   * Submit a link to a PR from that branch to your master for review
+
+### Grading Rubric
+
+| Criteria            | Deductions / Notes                                                          | Max Points |
+| ------------------- | --------------------------------------------------------------------------- | ---------- |
+| Feature Completion  | Score based on % of features demonstrably completed                         | 2.5        |
+| Code Implementation | Inefficiency // Poor Code Quality // Missing Documentation // Missing Tests | 2.5        |
+|                     |                                                                             | 5          |
