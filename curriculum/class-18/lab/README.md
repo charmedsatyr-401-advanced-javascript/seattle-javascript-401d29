@@ -73,4 +73,4 @@ The task for today is to refactor the application to use events to surface error
 Complete the README.md file included in the lab folder
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

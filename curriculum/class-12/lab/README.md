@@ -44,7 +44,7 @@ Spend no more than 4 hours on this assignment.
 
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
 
 
 ## Provider Documentation Reference

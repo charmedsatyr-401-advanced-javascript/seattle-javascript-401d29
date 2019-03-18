@@ -37,4 +37,4 @@ Create a NodeJS module in the `lib` directory named `greet.js`.  This module sho
 
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

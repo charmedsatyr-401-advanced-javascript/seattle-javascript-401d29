@@ -56,4 +56,4 @@ In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` t
 
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

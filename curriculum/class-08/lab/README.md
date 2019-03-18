@@ -62,4 +62,4 @@ The provided API server is setup to work, but the data models are missing
 * Your tests must be running green on travis.com
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

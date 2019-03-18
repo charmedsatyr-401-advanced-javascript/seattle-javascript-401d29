@@ -51,5 +51,5 @@ Now that the server has been upgraded to support dynamic models in the routes us
 * Get this server deployed to production. Although you aren't writing code against it, your documentation must be accessible through the links in your readme.  
 
 ## Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
 
