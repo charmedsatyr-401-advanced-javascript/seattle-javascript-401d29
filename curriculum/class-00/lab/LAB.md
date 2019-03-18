@@ -3,12 +3,14 @@
 
 ### Get this code up and running Travis and Heroku!
 
-- Create a git repo (copy this folder into a new one)
+- Create a new git repository
+
+- Copy the contents of this `lab` foler into that repository, at the root level.
 
 - Create a branch rule disallowing merges to master unless Travis builds are green.
 
 - Connect Travis to your git account
-  - It should find this repo
+  - It should find this newly created repo
 
 - Connect your Heroku to your git repo
   - Set it to auto deploy from master (or any named branch)
