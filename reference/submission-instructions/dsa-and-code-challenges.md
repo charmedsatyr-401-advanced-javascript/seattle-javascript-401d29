@@ -25,7 +25,7 @@
   
 ## Daily Code Challenges
 
-* Work in a folder called called `challenges` in your `data-structures-and-algorithms` repository
+* Work in a folder called called `code-challenges` in your `data-structures-and-algorithms` repository
 * For each challenge, create a sub-folder for that challenge (i.e. `challenge-02` along with a `__tests__` folder
 * Your files for the challenge should be named appropriately
 * These challenges will generally require you to use a data structure module to solve the challenge. This structure should allow you to easily import those in, like so:
