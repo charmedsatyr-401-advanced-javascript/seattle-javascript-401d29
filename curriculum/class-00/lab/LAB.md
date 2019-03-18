@@ -3,7 +3,7 @@
 
 ### Get this code up and running Travis and Heroku!
 
-- Create a git repo (fork this one)
+- Create a git repo (copy this folder into a new one)
 
 - Create a branch rule disallowing merges to master unless Travis builds are green.
 
