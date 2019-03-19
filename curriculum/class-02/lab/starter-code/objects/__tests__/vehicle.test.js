@@ -12,10 +12,6 @@ describe('Vehicles', () => {
       switch(type) {
         case 'Constructor':
           return new VehicleConstructor.Car('foo');
-        case 'Factory':
-          return new VehicleFactory.Car('foo');
-        case 'Class':
-          return new VehicleClass.Car('foo');
         default:
           return {};
       }
@@ -50,10 +46,6 @@ describe('Vehicles', () => {
       switch(type) {
         case 'Constructor':
           return new VehicleConstructor.Motorcycle('foo');
-        case 'Factory':
-          return new VehicleFactory.Motorcycle('foo');
-        case 'Class':
-          return new VehicleClass.Motorcycle('foo');
         default:
           return {};
       }
