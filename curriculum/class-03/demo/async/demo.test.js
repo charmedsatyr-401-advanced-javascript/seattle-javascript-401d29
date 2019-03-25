@@ -34,4 +34,4 @@ describe('callbacks', () => {
       .catch( err => expect(err).toBeFalsy() );
   });
 
-});
+});h
