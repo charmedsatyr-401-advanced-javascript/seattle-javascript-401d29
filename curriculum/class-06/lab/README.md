@@ -1,11 +1,20 @@
 # LAB: HTTP and REST
 
-## Overview
-The goal for this lab is to get your hands dirty in using an API, setting up a simple server that can attach to it and fetch data, and begin the building of a REST client tool that you can use during and after the course.
+The goal for this lab is to get your hands dirty in using and properly documenting an API
 
-## Assignments
-### JSON API Server
-* Implement an API server for a storefront, using json-server
+## Before you begin
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+
+## Getting Started
+In the `objects` folder, there is a full implementation of a Car and Motorcycle object created using a constructor function, with an index.js file that you can use to visually play with the objects as well as tests.
+
+In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` that tests the implementation of both a `Car` and a `Motorcycle` using the constructor pattern.
+
+## Requirements
+
+### Build a working JSON Server
+
+* Implement an API server suitable for a storefront, using json-server
   * Install `json-server` globally
   * Create a new repository called "simple-api"
   * Create a folder called `data` with a `db.json` file
@@ -21,39 +30,29 @@ The goal for this lab is to get your hands dirty in using an API, setting up a s
     * `/categories/:id/` PUT, DELETE
     * `/products`  GET, POST
     * `/products/:id/` PUT, DELETE
-    
-### Connect a web server
-Implement a Web Server with express and ejs
-  * Static routes and assets served from the public folder
-  * Use 'ejs' as your 'view engine'
-  * Implement your page views as you see fit
-  * Implement 2 get routes that will use `superagent` to fetch data from your API
-  * /
-    * Home Page
-        * Lists each category and draws a link to a detail page (/category/:name)
-  * /category/:name
-    * Lists the products in the category
-
-### Swagger Documentation
+* Document your new api with Swagger
   * Within your API, Create a folder called `docs`
   * Write and publish swagger documentation for your API
-    * Compose with [Swagger Editor](https://swagger.io/tools/swagger-editor/) 
-    
-### Stretch Goal
-Alter json-server to produce proper standardized API output
+  * Compose with [Swagger Editor](https://swagger.io/tools/swagger-editor/) 
+* Connect a web server
+  * Open this [React Application](https://codesandbox.io/s/w638oyk7o8) and "Fork" it
+  * Open the .env file and enter the URL to your API Server
+  * This server is configured to use the routes noted in the first lab requirement
+  * If your lab is working, this app will show your API Data!
 
-* Rather than just an array of objects on a get
-  * Return an object with a `count: ##` property and a `results: []` array
-* To do this, you'll need a server.js that requires in json-server and which overrides the renderer.  You will find instructions and examples on the json-server github page
-* If you hit this goal ...
-  * Alter the www server to use the new json format 
-  * Alter the swagger docs to reflect the new json format
-
-
+**Software Engineering Notes!** *something*
+  
 ### Testing
 **No automated testing is required for this assignment**
 
-Run your server against someone else's API
 
-### Assignemnt Submission Instructions
+### Stretch Goal:
+* Alter json-server to produce proper standardized API output
+  * Rather than just an array of objects on a get
+    * Return an object with a `count: ##` property and a `results: []` array
+    * To do this, you'll need a server.js that requires in json-server and which overrides the renderer.  You will find instructions and examples on the json-server github page
+  * Alter the swagger docs to reflect the new json format
+  * Alter the www server to use the new json format 
+
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
