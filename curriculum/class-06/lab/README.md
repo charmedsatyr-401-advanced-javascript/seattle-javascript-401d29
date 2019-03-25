@@ -5,11 +5,6 @@ The goal for this lab is to get your hands dirty in using and properly documenti
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-## Getting Started
-In the `objects` folder, there is a full implementation of a Car and Motorcycle object created using a constructor function, with an index.js file that you can use to visually play with the objects as well as tests.
-
-In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` that tests the implementation of both a `Car` and a `Motorcycle` using the constructor pattern.
-
 ## Requirements
 
 ### Build a working JSON Server
@@ -33,15 +28,13 @@ In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` t
 * Document your new api with Swagger
   * Within your API, Create a folder called `docs`
   * Write and publish swagger documentation for your API
-  * Compose with [Swagger Editor](https://swagger.io/tools/swagger-editor/) 
+  * Compose with [Swagger Editor](https://swagger.io/tools/swagger-editor/)
 * Connect a web server
   * Open this [React Application](https://codesandbox.io/s/w638oyk7o8) and "Fork" it
   * Open the .env file and enter the URL to your API Server
   * This server is configured to use the routes noted in the first lab requirement
   * If your lab is working, this app will show your API Data!
 
-**Software Engineering Notes!** *something*
-  
 ### Testing
 **No automated testing is required for this assignment**
 
@@ -52,7 +45,7 @@ In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` t
     * Return an object with a `count: ##` property and a `results: []` array
     * To do this, you'll need a server.js that requires in json-server and which overrides the renderer.  You will find instructions and examples on the json-server github page
   * Alter the swagger docs to reflect the new json format
-  * Alter the www server to use the new json format 
+  * Alter the www server to use the new json format
 
 ## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
