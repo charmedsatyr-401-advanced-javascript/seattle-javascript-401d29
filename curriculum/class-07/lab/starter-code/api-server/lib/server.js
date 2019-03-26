@@ -15,32 +15,32 @@ app.use( (req,res,next) => {
   next();
 });
 
-app.get('/posts', (req,res,next) => {
+app.get('/categories', (req,res,next) => {
   let count = db.length;
   let results = db;
   res.json({count,results});
 });
 
-app.get('/posts/:id', (req,res,next) => {
+app.get('/categories/:id', (req,res,next) => {
   let id = req.params.id;
   let record = db.filter((record) => record.id === parseInt(id));
   res.json(record[0]);
 });
 
 
-app.post('/posts', (req,res,next) => {
-  let {name,author,title,article} = req.body;
-  let record = {name,author,title,article};
+app.post('/categories', (req,res,next) => {
+  let {name} = req.body;
+  let record = {name};
   record.id = db.length + 1;
   db.push(record);
   res.json(record);
 });
 
-app.put('/posts/:id', (req,res,next) => {
+app.put('/categories/:id', (req,res,next) => {
 
 });
 
-app.delete('/posts/:id', (req,res,next) => {
+app.delete('/categories/:id', (req,res,next) => {
 });
 
 module.exports = {
