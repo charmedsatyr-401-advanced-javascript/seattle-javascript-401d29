@@ -36,10 +36,10 @@ describe('web server', () => {
 
   });
 
-  it('should respond properly on request to /api/v1/posts', () => {
+  it('should respond properly on request to /api/v1/categories', () => {
 
     return mockRequest
-      .get('/api/v1/posts')
+      .get('/api/v1/categories')
       .then(results => {
         expect(results.status).toBe(200);
       }).catch(console.error);
