@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:8080/"
+      "url": "http://localhost:3000/"
     }
   ],
   "paths": {
@@ -20,7 +20,7 @@
             "content": {
               "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/getAll"
+                  "$ref": "#/components/schemas/CategoryList"
                 }
               }
             }
@@ -28,28 +28,128 @@
         }
       },
       "post": {
+        "description": "Create a new category",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCategory"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returned the created category",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/categories/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer"
+          }
+        }
+      ],
       "get": {
-      },
-      "put": {
+        "description": "Get One Category",
+        "responses": {
+          "200": {
+            "description": "Returned one category",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          }
+        }
       },
       "delete": {
+        "description": "Delete One Category",
+        "responses": {
+          "200": {
+            "description": "Deleted one category",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Delete"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Replace a category",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returned the updated category",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
   "components": {
     "schemas": {
-      "getAll": {
+      "CategoryList": {
+        "type": "array",
+        "example": [
+          {
+            "id": 1,
+            "Category 1": null
+          },
+          {
+            "id": 2,
+            "Category 2": null
+          }
+        ]
+      },
+      "NewCategory": {
         "type": "object",
         "example": {
-          "count": 2,
-          "results": [
-            "{}",
-            "{}"
-          ]
+          "name": "Category Name"
         }
+      },
+      "Category": {
+        "type": "object",
+        "example": {
+          "id": 2,
+          "name": "Category Name"
+        }
+      },
+      "Delete": {
+        "type": "object",
+        "example": {}
       }
     }
   }
