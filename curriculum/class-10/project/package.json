@@ -11,8 +11,7 @@
   "author": "Code Fellows, LLC",
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.4",
-    "dotenv": "^6.2.0",
+    "dotenv": "^7.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.2",
     "method-override": "^3.0.0",

@@ -26,6 +26,7 @@
   font-size: 3vw;
   color: #888;
   line-height: 1vw;
+  text-align: center;
 }
 
 .book-container span {
@@ -62,6 +63,7 @@
   padding-top: 5vw;
   border-radius: 3px;
   width: 90%;
+  padding-bottom: 30px;
   margin: 10vw auto;
 }
 
@@ -72,6 +74,7 @@
 .book-container.detail-view .isbn {
   color: #888;
   font-style: italic;
+
 }
 
 .book-container.detail-view .desc {
@@ -119,4 +122,10 @@
 
 .hide-me {
   display: none;
+}
+
+select, option {
+  margin: 0px auto;
+  font-size: 3vw;
+  color: #000;
 }
