@@ -126,7 +126,7 @@ textarea:focus {
 button {
   display: block;
   font-size: 4vw;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 2vw;
   width: 40%;
 }

@@ -1,4 +1,4 @@
-DROP TABLE books;
+DROP TABLE IF EXISTS books, bookshelves;
 
 CREATE TABLE IF NOT EXISTS bookshelves (
   id SERIAL PRIMARY KEY,

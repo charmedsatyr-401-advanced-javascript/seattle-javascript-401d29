@@ -1,12 +1,13 @@
-# Project - Book App v2
+# Project: Book App v2
 
-## Submission Instructions
-  * Follow the instructions in the "Lab Instructions" documentation in the reference folder of the class repository
+Refactor the Code Fellows 301 Book App, migrating it from Postgres(SQL) into Mongo(noSQL) for data storage and modularize the server.
 
-### Overview
-Refactor the Code Fellows 301 Book App
+## Before you begin
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-#### Requirements
+## Requirements
+
+### Assignment: Refactor Book App
 * The UI and App Functionality must remain identical
 * Modularize the server code
   * server.js should be a requireable module
@@ -17,26 +18,16 @@ Refactor the Code Fellows 301 Book App
   * Middleware moved to appropriate files
   * Model behavior (SQL) moved out into a model file
 * Convert the models from postgres to mongo
-  * Keep the pg version in addition to the mongo version
-  * Must be able to change between them based on config
-    * (Model Interface)
+  * Keep the pg version working
+  * Model the data in mongo to match and migrate the data
+  * Must be able to change between data storage based on config (.env setting)
 * Deploy to Heroku
 
-**STRETCH GOAL**
-* Migrate the data
-  * Script this so that it can be repeated.
-
+**Software Engineering Notes!** *When you refactor, the heart of the task is to keep things the same (visually and functionally) while completely replacing the underlying implementation*
+  
 ### Testing
-* Write a complete set of tests for all data models, independent of the server
-* For testing the server and routes, use `supertest` to do end-to-end testing
-  * What we're testing is not whether express works, but whether your routes are doing the correct things.
-* Your tests must be running green on travis.com
+* Write a complete set of model and server/route tests using `supergoose`
 
-### Deployment
-* Your server must be deployed to and working on Heroku, with tests passing in Travis.
-
-###  Documentation
-Complete the README.md file included in the lab folder
-
-### Assignemnt Submission Instructions
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+
