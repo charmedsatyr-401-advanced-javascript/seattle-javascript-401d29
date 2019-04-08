@@ -1,45 +1,61 @@
-# Lab - TCP Chat Server
+# LAB: TCP Server / Message Application
 
-For this assignment, you will be building a TCP chatroom. Clients should be able to connect to the chatroom through the use of telnet. Clients should also be able to run special commands to exit the chatroom, list all users, reset their nickname, and send direct messages. You may add as many features to this application as you would like. Do not use any third party libraries and testing is *not* required.
+Create an event driven messaging server
 
 ## Before you begin
-* You'll need to perform an `npm install` in this folder to have jest installed as a dependency.
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-## Assignment
-Refactor the provided application using best practices for modularization, events, test-ability
+## Getting Started
+* `app.js` 
+  * Accepts a filename as a command line parameter
+  * Reads the file from the file system
+  * Converts it's contents to upper case
+  * Writes it back to the file system
 
-## Requirements 
-Refactor the provided chat server code as follows ...
-* Ensure that every function has JSDoc Notation
-* Convert to the use of events to trigger actions
-* Create a TCP Server using the NodeJS `net` module
-* Modularize the parser and socket pool into separately loadable (and test-able) modules
-* Modularize the actions into separately loadable (and test-able) modules
-  * You can use a node module called 'require-directory' to read those in all at once.
-* Create a Client constructor module that models an individual connection 
-  * Each client instance should contain (at least) `id`, `nickname`, and `socket` properties
-* Clients should be able to send messages to all other clients by sending it to the server
-* Clients should be able to run special commands by sending messages that start with a command name which in-turn emit an event that is handled by an action module.
-  * `@all` to send a message to all users
-  * `@quit` to disconnect
-  * `@list` to list all connected users
-  * `@nickname <new-name>` to change their nickname
-  * `@dm <to-username> <message>` to send a message directly to another user by their nickname
-* Connected clients should be maintained in an in-memory collection (array) called the `socketPool`
-  * When a socket emits the `close` event, the socket should be removed from the client pool
-  * When a socket emits the `error` event, the error should be logged on the server
-  * When a socket emits the `data` event, the data should be logged on the server and the commands below should be implemented
+* `server.js` 
+  * Listens for connections on port 3001
+  * Broadcasts out every message it hears to all connections
+
+## Requirements
+
+Refactor the provided application (`app.js`) using best practices for modularization, asynchronous file access, and test-ability.
+
+Connect the application (app.js) to the server (server.js) and emit messages related to file access.  Connect a new application (logger.js) to the server and log all file activity.
+
+
+### Assignment
+
+* Refactor `app.js` to be modular, testable, and clean
+  * Read/Write should be done in promises, not callbacks
+  * File Reading/Writing/Uppercasing should happen in one module
+    * Each operation should be in a separate function
+* Alter `app.js` to connect to the running server using TCP
+  * On file errors, write an error message to the socket
+  * On file save, write a save message to the socket.
+* Alter `server.js` to ... 
+  * Parse the text it receives
+  * Given a good "event" broadcast the event to all connected clients
+* Create a new application called `logger.js` ...
+  * Connect to the server
+  * Listen for "error" and "save" events only
+  * On "save", do a `console.log()` with the message
+  * On "error" do a `console.error()` with the message
+  
+### Stretch Goals
+* Monitor, Receive only specific events
+* Allow for objects/arrays as event data
+* Alter the event signature to be more scalable (i.e. replace the string based "event message..." format)
+* Create a new client that listens to different events
+  * i.e. split out the logger into a separate error handler
+  
+#### Deployment
+Not required for this assignment
 
 ### Testing
-* Write tests around all of your units
+* Write tests around all of your **units**
 * Test event handlers (not events themselves)
-* Use spies to assert that you're calling event handlers 
+* Use spies to help testing your logger methods (assert that console.log was called right)
 
-### Deployment
-* Your server need not be deployed to Heroku for this lab. However, installing it remotely will allow it to be publicly tested and played with.
 
-###  Documentation
-Complete the README.md file included in the lab folder
-
-### Assignemnt Submission Instructions
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
