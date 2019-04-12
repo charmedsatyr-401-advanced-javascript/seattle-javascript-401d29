@@ -1,15 +1,13 @@
-# Lab - Q Server 
+# LAB: Q Server
 
 **Project: Build a Multi-Tenant Message Queue Server.**
 
-**Summary:**
- 
- A Queue server runs independently, and is tasked with routing events and messaging between clients. 
+ A Queue server runs independently, and is tasked with routing events and messaging between clients.
 
 - Any connected client can "publish" a message into the server.
 - Any connected client can "subscribe" to receive messages by type.
 
-The Queue server has the ability to see which clients are connected,  to which Queues they are attached and further, to which events they are subscribed.  The Queue server is tasked with receiving any published message and then distributing it out to all connected and subscribed clients. 
+The Queue server has the ability to see which clients are connected,  to which Queues they are attached and further, to which events they are subscribed.  The Queue server is tasked with receiving any published message and then distributing it out to all connected and subscribed clients.
 
 **What is a message?**
  - A message is a package of information, categorized by queue and event
@@ -19,7 +17,7 @@ The Queue server has the ability to see which clients are connected,  to which Q
    - i.e. "delete, add, update, connection lost, error", etc.
  - `payload` - data associated with the event
    - i.e. "record id, record information, error text", etc.
- 
+
  **Use Case**
  - An API server responds to a POST request
    - User's access rights are confirmed
@@ -38,13 +36,22 @@ The Queue server has the ability to see which clients are connected,  to which Q
      - It also subscribes to `DB`/`CREATE`
      - When this event happens, it updates a counter in the browser for the operator to see that a new record was created.
    - A monitor application is running and is connected to the queue
-     - It also subscribes to `DB`/`CREATE` 
+     - It also subscribes to `DB`/`CREATE`
      - When this event happens, it sends a text to all sales people alerting them that a new customer account was created.
    - ... and so on.
-   
+
+
+
+## Before you begin
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+
+## Getting Started
+
 ## Requirements
 
-### Queue Server
+
+### Assignment: Queue Server
+
 * Create a socket.io based queue server
 * Multiple Queues, specified through configuration
   * Perhaps a list in a .env file or (eventually) from a DB
@@ -66,7 +73,7 @@ The Queue server has the ability to see which clients are connected,  to which Q
     * Manage how clients connect/subscribe to the queue and events
     * Broadcast a received message to the correct clients
 
-e.g. Using your server library to start up a server    
+e.g. Using your server library to start up a server
 ```
 const Q = require('./lib/server.js');
 Q.start();
@@ -80,7 +87,7 @@ const network = new Q('network');
 network.monitorEvent('attack');
 network.monitorEvent('no-service');
 ```
-  
+
 ### Queue Subscribers Library
 
 * A node module that any application can import
@@ -108,14 +115,14 @@ db.subscribe('create', (payload) => {
 
 console.log(db.subscriptions());
 ```
-      
+
 ### Queue Publishers Library
 * A node module that any application can import
 * Interface:
   * Publishers
     * Connect the server's  default namespace
     * Publish an event (by name) with payload to ANY valid queue
-    
+
 e.e. Using your publishers libray to publish an event to a queue
 ```
 const Publisher = require('./lib/publisher.js');
@@ -126,7 +133,7 @@ Q.publish('database', 'create', {id:99,name:'John'});
 Q.publish('network', 'attack', {type: 'DDOS',source:'Russia'});
 ```
 
-## Hints and Help
+#### Hints and Help
 Both **rooms** and **namespaces** allow you to inspect the list of clients attached. In building a larger system, it can be advantageous to use these to assist you in managing connections.
 
 * For each 'queue' configured, create a `namespace`
@@ -137,31 +144,18 @@ Both **rooms** and **namespaces** allow you to inspect the list of clients attac
   * Broadcast `event` and `payload` to each member of the namespace that matches the queue, to all members of the room matching the event name.
   * In this way, managing events and subsribers becomes far easier.
 
-
-### Resources
-* [Message Queues](https://en.wikipedia.org/wiki/Message_queue){:target="_blank"}
-* [Queue Servers](http://queues.io/){:targer="_blank"}
+#### Resources
+  * [Message Queues](https://en.wikipedia.org/wiki/Message_queue){:target="_blank"}
+  * [Queue Servers](http://queues.io/){:targer="_blank"}
 
 
 ### Testing
 * Write tests around all of your units
 * Test event handlers (not events themselves)
 
-### Stretch Goals / Food for Thought
-* Manage queues and events in a database
-* Store messages in the database to provide history/reporting
-* Handle errors in sending messages (re-send queue?)
-* Handle clients re-connecting
-* Authentication
-  * If a client authenticates
-    * Restore previous subscriptions
-    * Re-send any un-received messages
 
-### Deployment
-* Your server must be deployed to and working on Heroku, with tests passing in Travis.
-
-###  Documentation
-Complete the README.md file included in the lab folder
-
-### Assignemnt Submission Instructions
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+
+
+
