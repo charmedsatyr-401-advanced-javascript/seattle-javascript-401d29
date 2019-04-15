@@ -2,10 +2,7 @@
   "name": "q",
   "version": "1.0.0",
   "description": "",
-  "main": "client.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,9 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "faker": "^4.1.0",
-    "socket.io": "^2.2.0",
-    "socket.io-client": "^2.2.0",
-    "socket.io-emitter": "^3.1.1"
+    "@nmq/q": "^1.0.0"
   }
 }
