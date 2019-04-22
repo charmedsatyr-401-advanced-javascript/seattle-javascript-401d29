@@ -1,12 +1,36 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Props and State
-=================================================
-
+# LAB - Props and State
 
 ## Before you begin
-* You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
 
-## Assignment 1 - Props Practice
-Fork the [Props Practice Sandbox](https://codesandbox.io/s/9y453m63or)
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
+
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
+
+Starter code has been provided for you in the `/lab/starter-code` folder. There are 3 separate assignments, each with it's own folder.
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to the correct starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
+
+## Requirements
+
+### Assignment 1 - Props Practice
+Begin with: `/lab/starter-code/props`
 
 **Challenge Instructions (Part 1)**
 
@@ -31,8 +55,9 @@ Fork the [Props Practice Sandbox](https://codesandbox.io/s/9y453m63or)
 * Create a 4th component and send props there as well
 
 
-## Assignment 2 - Internal State Practice
-Fork the [Internal State Practice Sandbox](https://codesandbox.io/s/myvyyqvwn9)
+### Assignment 2 - Internal State Practice
+
+Begin with: `/lab/starter-code/internal-state`
 
 **Challenge Instructions (Part 1)**
 
@@ -59,8 +84,9 @@ Fork the [Internal State Practice Sandbox](https://codesandbox.io/s/myvyyqvwn9)
 * Use multiple fields in your form to update multiple state properties
 * Make evaluations on the state of your state to dynamically render things. For example, if the name is empty, show an error or if there are 2 names given (first and last), reverse and comma separate them.
 
-## Assignment 3 - External State Practice
-Fork the [External State Practice Sandbox](https://codesandbox.io/s/jn2klxzq3y)
+### Assignment 3 - External State Practice
+
+Begin with: `/lab/starter-code/external-state`
 
 **Challenge Instructions (Part 1)**
 
@@ -90,9 +116,9 @@ Fork the [External State Practice Sandbox](https://codesandbox.io/s/jn2klxzq3y)
 * Use multiple fields in your form to update multiple state properties
 * Make evaluations on the state of your state to dynamically render things. For example, if the name is empty, show an error or if there are 2 names given (first and last), reverse and comma separate them.
 
-##  Documentation
-Complete the README.md file included in the lab folder
+### Tests
 
-##  Submission Instructions
-Submit links to each of your Sandbox URLs (6 total)
-Submit a link to your fork of the lab rep, with an updated README.md. This file should document your work in each of the sandboxes, including a basic UML drawing of each solution.
+Write mount/enzyme tests for each component/assignment
+
+## Assignment Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

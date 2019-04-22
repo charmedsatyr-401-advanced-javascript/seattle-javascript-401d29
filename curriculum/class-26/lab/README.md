@@ -1,10 +1,30 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Component Based UI
-==============================================================
+# LAB - Component Based UI
 
-## Assignment
 Create a counter application using React
 
-### Application Requirements
+## Before you begin
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
+
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
+
+## Requirements
+
 * Visit the Sandbox containing the [Lab Starter Code](https://codesandbox.io/s/06r02vr7w) and FORK it.
 * Move the `Header` and `Footer` components to separate files
 * Properly `export` them as defaults
@@ -27,6 +47,5 @@ Create a counter application using React
     * Where would the buttons look best?
     * Can you make the number "pop"
 
-### Submission Instructions
-* Upload the completed README.md, with diagram to your Code Sandbox
-* Submit a link to your Application running at Code Sandbox
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

@@ -1,16 +1,30 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Application State
-=============================================================
-
+# LAB - Application State
 
 ## Before you begin
-* You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
 
-## Assignments
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
+
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
 
 ### Connect to a store
 For this assignment, you're going to take an existing component which puts out some random numbers when a div is clicked, and refactor it to use a Redux store instead of local state.
 
-* Fork this sandbox: [starter code: app-state - connect](https://codesandbox.io/s/ojl539kkz5)
+* You've been provided starter code to work with - `app-state-connect`
 * Connect `index.js` to the redux store and pass it down to the `App` component
 * Remove the state declaration in the constructor
   * Do you still need a constructor?
@@ -26,7 +40,7 @@ For this assignment, you're going to take an existing component which puts out s
 ### Create a new reducer
 In this assignment, we have a working app that uses Redux for it's state management. Now, it's time to extend it and add a new component with it's own reducer/actions. The twist is that this new reducer will also be able to respond to actions that the other component fires.
 
-* Fork this sandbox: [starter code: app-state - reducers](https://codesandbox.io/s/zlk5o2y6wp)
+* You've been provided starter code to work with - `app-state-reducers`
 * Create a new numbers reducer in the store: `numbers-reducer.js`
 * Create a new numbers action in the store: `numbers-actions.js`
 * Create a new action creator for the "RESET" action
@@ -44,15 +58,13 @@ In this assignment, we have a working app that uses Redux for it's state managem
 
 
 ###### Testing
-* Tests are not required for this lab.
-
+* Tests are not required for this lab
 
 ###### Stretch Goals:
 * Do all of this again, but from scratch
 * Add a third reducer and subscribe to both bits of state
+* Wire up Reducer unit tests and a fake store
 
 
-##  Documentation
-* Complete the README.md file included in the lab folder
-* A solid UML Diagram of your soulution code is required.
-
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
