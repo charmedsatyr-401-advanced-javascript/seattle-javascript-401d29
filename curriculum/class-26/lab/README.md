@@ -1,6 +1,6 @@
 # LAB - Component Based UI
 
-Create a counter application using React
+Create and style a counter application using React components.
 
 ## Before you begin
 Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
@@ -23,9 +23,15 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Getting Started
 
+Starter code has been provided for you in the `/lab/starter-code` folder. 
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
+
+
 ## Requirements
 
-* Visit the Sandbox containing the [Lab Starter Code](https://codesandbox.io/s/06r02vr7w) and FORK it.
 * Move the `Header` and `Footer` components to separate files
 * Properly `export` them as defaults
 * Import them into the `App` Component using ES6 `import` statement
@@ -39,7 +45,7 @@ Once you have a good visual and mental model of how the application works, break
 
 ### Design Implementation
 * Create a file called `app.scss` and `import` that into the `App` component
-* Add some cool styling for the header, making use of SASS nesting
+* Add some creatove styling for the header, making use of SASS nesting
 * Alter the `app.scss` as follows:
   * Alter your css rules to use a variable (i.e. $backgroundColor)
   * Start getting creative about styling the basic layout of the app
