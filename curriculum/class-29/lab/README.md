@@ -1,7 +1,27 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Component Composition
-=================================================================
+# LAB - Routing and Component Composition
 
 ## Before you begin
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
+
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
+
+## Requirements
 
 **For Each of these tasks, implement a router into the application.**
 
@@ -28,7 +48,7 @@
   * Repeat the process with functional components in different files
     * `<FunctionalStory />` and `<FunctionalDetails />`
   * Your output should repeat, once with each component set
-  
+
 ### Assignment 3  - Conditionals
 * Create a new component (in its own folder) called `If`
 * Code this component to use logic to hide/show it's `props.children`
@@ -38,19 +58,24 @@
 * Use this component to conditionally render items from the previous assignments.
 
 ### Assignment 4  - Modal
-* Fork the [star wars fetcher sandbox](https://codesandbox.io/s/1o64l8pqm4) 
+* Fork the [star wars fetcher sandbox](https://codesandbox.io/s/1o64l8pqm4)
 * Create a new component (in its own folder) called `Modal`
 * Replace the `<h3>` tag that shows the person with a `<Modal>` with the `<h3>` inside it
 * Code out the modal component with the following features:
   * When active, it should render it's `{props.children}`
   * It should draw itself with a close icon/link
   * It should be able to close (i.e. not render)
-  
+
 
 ### Testing
 * Complete basic render testing on these components
 * Complete logical and render testing on the if components
 
+### Stretch Goals
+* Create an NPM account and an organization
+* Publish your `<If />` and `<Modal />` components to NPM
+* Now, you can use them in any project.
+  * Make them great!
 
-##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

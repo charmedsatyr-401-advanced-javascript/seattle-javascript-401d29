@@ -1,10 +1,12 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Component Composition
-============================================
+# Routing and Component Composition
 
 ## Learning Objectives
 
 **Students will be able to ...**
 
+* Implement React Routing via `<BrowserRouter />`
+  * Page Level
+  * Component Swapping
 * Compose components heirarchically
 * Create logical wrapper components
 * Create functional wrapper components
@@ -27,7 +29,12 @@
 * Cards and Decks - Layout/SASS
 
 ## Main Topic:
-Component Composition - Logical
+
+### Routing
+
+Using the 
+
+### Component Composition - Logical
 
 In this setup, you are sending your child components the raw data and allowing them to render the output as they decide.
 
@@ -49,7 +56,7 @@ In this setup, you are sending your child components the raw data and allowing t
 
 ```
 
-Component Composition - Using Logicless Children
+### Component Composition - Using Logic-less Children
 
 This is typically used when your `children` are already in JSX form (pre-rendered) and you need to display them as a whole.  A good example might be a gallery of images
 

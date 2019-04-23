@@ -1,12 +1,34 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Remote APIs
-======================================================
+# LAB - Remote APIs
 
 ## Before you begin
-* You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
+
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
+
+Starter code has been provided for you in the `/lab/starter-code` folder. 
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
 
 ## Assignment
 ### Refactor A Star Wars Lookup App
-* Fork [this sandbox](https://codesandbox.io/s/l7n0rwv0ym)
 * Convert the current react component state to use a Redux Store
   * Create a store
   * Connect to it, create it, provide from the index
@@ -44,6 +66,5 @@
 * Create a new component for navigation that will use those links to draw a list of pages to fetch, and then keep re-calling that initial fetch method to update the list based on what page you are "on"
 * Implement these functional methods as well ...
 
-
-# ##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
