@@ -25,8 +25,9 @@ ALGORITHM Partition(arr, left, right)
         if arr[i] <= pivot
             low++
             Swap(arr, i, low)
-            Swap(arr, right, low + 1)
-            return low + 1
+     
+     Swap(arr, right, low + 1)
+     return low + 1
 
 ALGORITHM Swap(arr, i, low)
     DEFINE temp;
