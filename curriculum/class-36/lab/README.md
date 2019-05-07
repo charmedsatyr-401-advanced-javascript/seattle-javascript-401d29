@@ -1,15 +1,29 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Context and Hooks
-=============================================================
+# LAB - Context API
 
-## Before you begin
-* Start with a new react app, created at Code Sandbox or locally with create-react-app
-
-## Implement a Context Provider and Consumer
 Create a React application that wraps the entire `<App/>` with a context provider, created using Context API. Then, create multiple components that act as consumers to your context, using it in various ways.
 
 Specifically, build a counter that uses 3 separate components that subscribe to a common provider
 
-### Requirements
+## Before you begin
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
+
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+### Assignment 1 - Counter
 * Create a Counter Provider component, which exposes the following state:
   * `count` - A number (default to 0)
   * `increment` - A reference to a function that increases the count
@@ -22,10 +36,21 @@ Specifically, build a counter that uses 3 separate components that subscribe to 
   * `<Counter />` - Renders the current value of `count` from the Counter Provider
 * Provide good styling. Use the css-in-js methodology within the components themselves.
 
+## Assignment 2 - To Do
+You have been provided, in the `starter-code` folder, a working To Do manager application, written using standard React Component State
+
+* Refactor the app to make use of Context
+* Create a `context` for the Application
+* Create a separate `<Counter />` component that reads and displays the `count` from Context
+* Create separate components for the main To App elements
+  * `form` - Adds and updates to do list items
+  * `list` - Lists items, manages complete state and form visibility
+
+
 ### Testing
 * Do a deep mount of the app, and set tests to make assertions on the child components that consume context from the Provider.
   * Can they see context?
   * Can they interact via published functions?
 
-##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
